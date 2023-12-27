@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Time Picker with Tempus Dominus</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="form-group">
+                    <label for="startTime">Start Time:</label>
+                    <div class="input-group date" id="startTimepicker" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" id="startTime" data-target="#startTimepicker" />
+                        <div class="input-group-append" data-target="#startTimepicker" data-toggle="datetimepicker">
+                            <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="form-group">
+                    <label for="endTime">End Time:</label>
+                    <div class="input-group date" id="endTimepicker" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" id="endTime" data-target="#endTimepicker" />
+                        <div class="input-group-append" data-target="#endTimepicker" data-toggle="datetimepicker">
+                            <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href=""></a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#startTimepicker').datetimepicker({
+                format: 'LT',
+                icons: {
+                    time: 'bi bi-clock',
+                    up: 'bi bi-chevron-up',
+                    down: 'bi bi-chevron-down',
+                }
+            });
+
+            $('#endTimepicker').datetimepicker({
+                format: 'LT',
+                icons: {
+                    time: 'bi bi-clock',
+                    up: 'bi bi-chevron-up',
+                    down: 'bi bi-chevron-down',
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
